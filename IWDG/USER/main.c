@@ -92,7 +92,7 @@ int main(void)
 			printf("温度:%d.%d\r\n", data[2], data[3]);
 		}
 		delay_s(2);
-		//2s多喂狗，喂狗程序
+		//2s多喂狗，喂狗程序，不能放在主函数。
 		IWDG_ReloadCounter();
 	}
     return 0;
