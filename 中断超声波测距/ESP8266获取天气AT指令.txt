@@ -1,0 +1,9 @@
++++
+AT+RST\r\n
+ATE0\r\n
+AT+CWMODE_CUR=1\r\n
+AT+CWJAP_CUR="Pho","12345678"\r\n
+AT+CIPSTART="TCP","api.seniverse.com",80\r\n
+AT+CIPMODE=1\r\n
+AT+CIPSEND\r\n
+GET /v3/weather/now.json?key=SGzermsLShYcScmMv&location=guangzhou&language=zh-Hans&unit=c HTTP/1.1\r\nHost: api.seniverse.com\r\n\r\n

@@ -5,7 +5,8 @@
 #include "sys.h"
 
 
-void Exti_Init(void);
+void Exti_PA0_init(void);
+
 
 
 #endif

@@ -2,7 +2,7 @@
 .\objects\key.o: ..\MYCODE\key.h
 .\objects\key.o: ..\CORE\stm32f4xx.h
 .\objects\key.o: ..\CORE\core_cm4.h
-.\objects\key.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\key.o: D:\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\key.o: ..\CORE\core_cmInstr.h
 .\objects\key.o: ..\CORE\core_cmFunc.h
 .\objects\key.o: ..\CORE\core_cm4_simd.h

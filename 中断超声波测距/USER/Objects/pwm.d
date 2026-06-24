@@ -2,7 +2,7 @@
 .\objects\pwm.o: ..\MYCODE\pwm.h
 .\objects\pwm.o: ..\CORE\stm32f4xx.h
 .\objects\pwm.o: ..\CORE\core_cm4.h
-.\objects\pwm.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\pwm.o: D:\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\pwm.o: ..\CORE\core_cmInstr.h
 .\objects\pwm.o: ..\CORE\core_cmFunc.h
 .\objects\pwm.o: ..\CORE\core_cm4_simd.h
@@ -35,3 +35,4 @@
 .\objects\pwm.o: ..\FWLIB\inc\stm32f4xx_dac.h
 .\objects\pwm.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\pwm.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
+.\objects\pwm.o: ..\SYSTEM\sys.h

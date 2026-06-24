@@ -2,7 +2,7 @@
 .\objects\led.o: ..\MYCODE\led.h
 .\objects\led.o: ..\CORE\stm32f4xx.h
 .\objects\led.o: ..\CORE\core_cm4.h
-.\objects\led.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\led.o: D:\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\led.o: ..\CORE\core_cmInstr.h
 .\objects\led.o: ..\CORE\core_cmFunc.h
 .\objects\led.o: ..\CORE\core_cm4_simd.h
@@ -35,4 +35,3 @@
 .\objects\led.o: ..\FWLIB\inc\stm32f4xx_dac.h
 .\objects\led.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\led.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
-.\objects\led.o: ..\SYSTEM\sys.h

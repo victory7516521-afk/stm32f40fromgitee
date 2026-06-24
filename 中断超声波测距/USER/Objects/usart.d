@@ -1,8 +1,8 @@
-.\objects\usart.o: ..\MYCODE\usart.c
-.\objects\usart.o: ..\MYCODE\usart.h
+.\objects\usart.o: ..\SYSTEM\usart.c
+.\objects\usart.o: ..\SYSTEM\usart.h
 .\objects\usart.o: ..\CORE\stm32f4xx.h
 .\objects\usart.o: ..\CORE\core_cm4.h
-.\objects\usart.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usart.o: D:\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usart.o: ..\CORE\core_cmInstr.h
 .\objects\usart.o: ..\CORE\core_cmFunc.h
 .\objects\usart.o: ..\CORE\core_cm4_simd.h
@@ -35,3 +35,9 @@
 .\objects\usart.o: ..\FWLIB\inc\stm32f4xx_dac.h
 .\objects\usart.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\usart.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
+.\objects\usart.o: ..\SYSTEM\sys.h
+.\objects\usart.o: ..\MYCODE\esp8266.h
+.\objects\usart.o: ..\SYSTEM\usart.h
+.\objects\usart.o: ..\MYCODE\esp8266_mqtt.h
+.\objects\usart.o: D:\keilv5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\usart.o: ..\SYSTEM\delay.h

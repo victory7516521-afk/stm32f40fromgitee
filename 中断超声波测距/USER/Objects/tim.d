@@ -2,7 +2,7 @@
 .\objects\tim.o: ..\MYCODE\tim.h
 .\objects\tim.o: ..\CORE\stm32f4xx.h
 .\objects\tim.o: ..\CORE\core_cm4.h
-.\objects\tim.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\tim.o: D:\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\tim.o: ..\CORE\core_cmInstr.h
 .\objects\tim.o: ..\CORE\core_cmFunc.h
 .\objects\tim.o: ..\CORE\core_cm4_simd.h
@@ -35,3 +35,4 @@
 .\objects\tim.o: ..\FWLIB\inc\stm32f4xx_dac.h
 .\objects\tim.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\tim.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
+.\objects\tim.o: ..\SYSTEM\sys.h

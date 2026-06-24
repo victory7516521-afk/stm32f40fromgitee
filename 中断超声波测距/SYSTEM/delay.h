@@ -5,10 +5,10 @@
 
 
 
-void Delay_Init(void);
-void delay_us(u32 nus);
-void delay_ms(u32 nms); 
-void delay_s(u32 ns);
+void Delay_init(void);
 
+void delay_us(u32 nus);
+void delay_ms(u32 nms);
+void delay_s(u32 ns);
 
 #endif

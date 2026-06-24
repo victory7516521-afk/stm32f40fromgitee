@@ -1,47 +1,55 @@
 #include "led.h"
 
-
-/*
-引脚说明
-
-LED0--PF9
-LED1--PF10
-LED2--PE13
-LED3--PE14
-
-
-PF9输出低电平，灯亮；输出高电平，灯灭
-
-*/
 void Led_Init(void)
 {
-	GPIO_InitTypeDef	GPIOF_InitStruct;
-	GPIO_InitTypeDef	GPIOE_InitStruct;
+	//打开GPIOF组时钟
+//	RCC_AHB1ENR |= (0x01<<5); 		//5位置1
+
+//	//PF9配置为通用输出模式
+//	GPIOF_MODER &= ~(0x01<<19);  	//19位清0
+//	GPIOF_MODER |= (0x01<<18);   	//18位置1
+//	
+//	//输出推挽
+//	GPIOF_OTYPER &= ~(0x01<<9);  	//9位清0
+//	
+//	//输出速度25MHZ
+//	GPIOF_OSPEEDR &= ~(0x01<<19);  	//19位清0
+//	GPIOF_OSPEEDR |= (0x01<<18);   	//18位置1
+//	
+//	//设置为上拉
+//	GPIOF_PUPDR &= ~(0x01<<19);  	//19位清0
+//	GPIOF_PUPDR |= (0x01<<18);   	//18位置1
 	
+	//结构体
+	GPIO_InitTypeDef GPIO_InitStruct;
+	//使能GPIOF时钟
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOF, ENABLE);
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);	
+	//使能GPIOE时钟
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
 	
-
-	GPIOF_InitStruct.GPIO_Pin	= GPIO_Pin_9|GPIO_Pin_10;	//引脚9，10
-	GPIOF_InitStruct.GPIO_Mode	= GPIO_Mode_OUT;//输出模式
-	GPIOF_InitStruct.GPIO_OType	= GPIO_OType_PP;//推挽模式
-	GPIOF_InitStruct.GPIO_Speed  = GPIO_Speed_25MHz; //速度
-	GPIOF_InitStruct.GPIO_PuPd	= GPIO_PuPd_UP; //上拉
-	GPIO_Init(GPIOF, &GPIOF_InitStruct);	
 	
-
-	GPIOE_InitStruct.GPIO_Pin	= GPIO_Pin_13|GPIO_Pin_14;	//引脚13,14
-	GPIOE_InitStruct.GPIO_Mode	= GPIO_Mode_OUT;//输出模式
-	GPIOE_InitStruct.GPIO_OType	= GPIO_OType_PP;//推挽模式
-	GPIOE_InitStruct.GPIO_Speed  = GPIO_Speed_25MHz; //速度
-	GPIOE_InitStruct.GPIO_PuPd	= GPIO_PuPd_UP; //上拉
-	GPIO_Init(GPIOE, &GPIOE_InitStruct);	
+	//设置引脚
+	GPIO_InitStruct.GPIO_Pin    = GPIO_Pin_9|GPIO_Pin_10;
+	//设置为通用输出模式
+	GPIO_InitStruct.GPIO_Mode	= GPIO_Mode_OUT;
+	//设置为推挽输出
+	GPIO_InitStruct.GPIO_OType  = GPIO_OType_PP;
+	//设置为25MHz
+	GPIO_InitStruct.GPIO_Speed 	= GPIO_Speed_25MHz;
+	//设置为上拉电阻
+	GPIO_InitStruct.GPIO_PuPd 	= GPIO_PuPd_UP;
 	
-	PFout(9) = 1;
-	PFout(10) = 1;
-	PEout(13) = 1;
-	PEout(14) = 1;
+	//初始化GPIO
+	GPIO_Init(GPIOF,&GPIO_InitStruct);
 	
-		
+	//设置引脚
+	GPIO_InitStruct.GPIO_Pin    = GPIO_Pin_13|GPIO_Pin_14;
+	GPIO_Init(GPIOE,&GPIO_InitStruct);
+	
+	//灯灭
+	GPIO_SetBits(GPIOF,GPIO_Pin_9);
+	GPIO_SetBits(GPIOF,GPIO_Pin_10);
+	GPIO_SetBits(GPIOE,GPIO_Pin_13);
+	GPIO_SetBits(GPIOE,GPIO_Pin_14);
 	
 }
