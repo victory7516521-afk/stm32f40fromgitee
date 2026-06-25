@@ -112,7 +112,7 @@ void TIM2_IRQHandler(void)
     //判断更新中断标志是否置1
     if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET)
     {
-		//2s多喂狗，喂狗程序，不能放在主函数。
+		//中断里面的延时不能超过1us，可以设置一个标志位来执行循环
 		u8 data[5] = {0},ret;
 		char buffer[20]={0},uffer[20]={0};
 		ret = Dht11_Data(data);
