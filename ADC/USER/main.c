@@ -61,25 +61,24 @@ void USART1_IRQHandler(void)
 int main(void)
 { 
 	u16 value;
+	float sum;
 	//一个项目中，只能有一次的中断优先级分组
 	//中断优先级分组：第二组，抢占优先级范围:0~3 响应优先级范围:0~3 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
-	
 	
 	Delay_Init();
 	Usart1_Init(115200);
 	Led_Init();
 
 	Adc_PA4_Init();
-
-
 	
 	//处理逻辑--前端
 	while(1)
 	{
 		value = Get_Adc_Value();
+		sum = (3.3*value)/4095;
+		printf("value:%d  电压：%.2f\r\n", value,sum);
 		
-		printf("value:%d\r\n", value);
 		
 		delay_s(1);
 	}
