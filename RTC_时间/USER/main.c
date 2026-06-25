@@ -94,7 +94,7 @@ int main(void)
 		
 		RTC_GetTime(RTC_Format_BIN,&RTC_TimeStruct);
 		RTC_GetDate(RTC_Format_BIN,&RTC_DateStruct);
-		printf("%d-%d-%d\r\n",RTC_TimeStruct.RTC_Hours , RTC_TimeStruct.RTC_Minutes,RTC_TimeStruct.RTC_Seconds);
+		printf("%d-%d-%d\r  ",RTC_TimeStruct.RTC_Hours , RTC_TimeStruct.RTC_Minutes,RTC_TimeStruct.RTC_Seconds);
 		printf("%d-%d-%d\r\n",RTC_DateStruct.RTC_Year,RTC_DateStruct.RTC_Month,RTC_DateStruct.RTC_Date );
 		printf("%d\r\n",RTC_DateStruct.RTC_WeekDay);
 		delay_s(1);
