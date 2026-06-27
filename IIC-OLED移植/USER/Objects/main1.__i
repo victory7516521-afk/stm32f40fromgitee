@@ -1,0 +1,6 @@
+--c99 --gnu -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\FWLIB\inc -I ..\CORE -I ..\USER -I ..\SYSTEM -I ..\MYCODE
+-I.\RTE\_Target_1
+-ID:\keil\Keil\STM32F4xx_DFP\1.0.8\Device\Include
+-ID:\keil\ARM\CMSIS\Include
+-D__UVISION_VERSION="528" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER
+-o .\objects\main1.o --omf_browse .\objects\main1.crf --depend .\objects\main1.d "..\MYCODE\main1.c"
