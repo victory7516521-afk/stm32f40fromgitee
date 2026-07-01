@@ -1,0 +1,10 @@
+#ifndef __RTC_H
+#define __RTC_H
+
+#include "stm32f4xx.h"
+#include "sys.h"
+
+void Rtc_init(void);
+void RTC_Alarm_Ainit(void);
+
+#endif
