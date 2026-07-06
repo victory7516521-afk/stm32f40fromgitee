@@ -1,0 +1,15 @@
+#ifndef __RTC_H
+#define __RTC_H
+
+
+#include "stm32f4xx.h" //这个头文件包含所有头文件
+#include "sys.h"
+#include "led.h"
+
+
+void Rtc_Init(void);
+
+void RTC_Alarm_AInit(void);
+
+
+#endif
