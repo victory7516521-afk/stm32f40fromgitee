@@ -1,0 +1,30 @@
+STM32F4OTA_ESP8266_Bootloader为引导程序
+远程更新的代码（APP）:远程更新的APP
+Ymoden_server：为运行在Linux的TCP服务器
+
+
+备注：STM32 OTA远程更新需要连接热点
+
+电脑与ubuntuIP同一个网段
+
+热点名称：WSDSB
+热点密码：TLYU.4936
+
+
+
+第一步：
+设置FLASH为默认值，修STM32F4OTA_ESP8266_Bootloader中的WIFI热点名称与密码，修服务器IP地址。
+IROM1  0x08000000  0x80000
+             起始地址       大小
+
+
+
+
+第一步：
+设置远程更新的代码（APP）中的ROM为第五扇区，编译生成的.bin文件放置在ymodem_server中。
+IROM1  0x08020000  0x20000（更正，这个使用 默认即可）
+             起始地址       大小
+
+
+
+第三步：烧录STM32F4OTA_ESP8266_Bootloader，并重启，按下S3按键，启动服务器代码传输。
